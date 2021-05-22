@@ -3,8 +3,7 @@ import pandas as pd
 
 print ('4 letter word password generator')
 
-file ='list.xlsx'
-data = pd.ExcelFile(file)
-df = data.parse(sheet1)
-df.info
-df.head(10)
+filename = "list.xlsx"
+
+df = pd.read_excel(filename, sheet_name = "sheet1", engine='openpyxl')
+df.head()
